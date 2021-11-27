@@ -2,17 +2,20 @@ const url = 'http://files.cod3r.com.br/curso-js/funcionarios.json'
 const axios = require('axios')
 
 const chineses = f => f.pais === 'China'
-const mulheres = f => f.genero === 'f'
-const menorSalario = (Func, FuncAtual) => {
-    return Func.salario < FuncAtual.salario ? Func : FuncAtual
+const mulheres = f => f.genero === 'F'
+const menorSalario = (func, funcAtual) => {
+    return func.salario < funcAtual.salario ? func : funcAtual
 }
 
 axios.get(url).then(Response => {
-    const Funcionarios = Response.data 
-    console.log(Funcionarios)
+    const funcionarios = Response.data 
+    console.log(funcionarios)
+
+
+
+     const func = funcionarios
+       .filter(chineses)
+       .filter(mulheres)
+       .reduce(menorSalario)
+     console.log(func)
 })
-const Func = Funcionarios
-    .filter(chineses)
-    .filter(mulheres)
-    .reduce(menorSalario)
-console.log(Func)
