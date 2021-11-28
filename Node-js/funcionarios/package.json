@@ -1,15 +1,18 @@
 {
   "name": "funcionarios",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "funcionarios.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon funcionarios.js",
+    "dev": "nodemon"
   },
   "author": "Junior",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "axios": "^0.24.0"
-  }
+    "axios": "0.24.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {}
 }
