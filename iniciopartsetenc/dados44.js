@@ -1,0 +1,6 @@
+const a = 5; // let e var e mudavel.. const e fixo n muda
+// ....
+//a = a + 5; // pode ser executado somente se trocar const por var ou let
+
+// ...
+console.log(a);
